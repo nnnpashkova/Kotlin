@@ -7,7 +7,7 @@ fun main(){
     val x3 = 3
     val x4 = 5
     val sumOfGrades = x1+x2+x3+x4
-    val average = sumOfGrades/anglStudent
+    val average = sumOfGrades/englishStudent
     println(average)
 
 }
