@@ -1,6 +1,6 @@
 package lesson3
 
-fun main(){
+fun main() {
     val username = "Мария"
     val greetingOfTheDay = "Добрый день"
     val greetingInTheEvening = "Добрый вечер"
