@@ -11,4 +11,5 @@ fun main(){
             "9 × 7 = ${multiplicationTableNumber * 7} \n" +
             "9 × 8 = ${multiplicationTableNumber * 8} \n" +
             "9 × 9 = ${multiplicationTableNumber * 9}")
+
 }
