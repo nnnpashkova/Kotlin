@@ -11,7 +11,4 @@ fun main(){
     val ageChangeOfSurname = 22
     dataOnTheChangeOfSurname = "$surnameModified $name $middleName, $ageChangeOfSurname"
     println(dataOnTheChangeOfSurname)
-
-
-
 }
