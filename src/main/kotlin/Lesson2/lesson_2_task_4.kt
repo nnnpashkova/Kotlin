@@ -5,9 +5,7 @@ fun main(){
     val crystalline = 7
     val iron = 11
     val crystallineBuff = (crystalline * buffPercent).toInt()
-    val crystallineWithBuff = crystallineBuff + crystalline
-    println(crystallineWithBuff)
+    println(crystallineBuff)
     val ironBuff = (iron * buffPercent).toInt()
-    val ironWithBuff = ironBuff + iron
-    println(ironWithBuff)
+    println(ironBuff)
 }
