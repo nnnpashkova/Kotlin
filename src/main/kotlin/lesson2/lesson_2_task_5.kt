@@ -4,6 +4,6 @@ fun main(){
     val interestRate = 16.7
     val depositPeriod = 20
     val finalDepositAmount = depositAmount * (1 + interestRate / 100) * depositPeriod
-    println(finalDepositAmount)
+    println(String.format("%.3f",finalDepositAmount))
 }
 
