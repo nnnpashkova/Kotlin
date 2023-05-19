@@ -24,4 +24,5 @@ fun main() {
     } else {
        println("Неудача! Крутите барабан!")
     }
+    println("Правильный ответ: $firstNumber, $secondNumber")
 }
