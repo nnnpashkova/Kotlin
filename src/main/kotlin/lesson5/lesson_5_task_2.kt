@@ -1,7 +1,7 @@
 package lesson5
 
 fun main() {
-    val yearOfBirth = readLine()!!.toInt()
+    val yearOfBirth = readln().toInt()
 
     val currentYear = 2023
     val userAge = currentYear - yearOfBirth
