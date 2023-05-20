@@ -4,16 +4,16 @@ fun main() {
     val firstNumber = 8
     val secondNumber = 12
 
-    println("Какого числа отмечается междунородный женский день? ")
+    println("Введите первое число от 0 до 100:")
     val userFirstNumber = readln().toInt()
-    val firstAnswerCorrect = firstNumber == userFirstNumber
+    val firstAnswerCorrect = (firstNumber == userFirstNumber) ||(secondNumber == userFirstNumber)
     if (firstAnswerCorrect) {
         println("Вы молодец")
     }
 
-    println("Какого числа отмечается День космонавтики? ")
+    println("Введите второе число от 0 до 100:")
     val userSecondNumber = readln().toInt()
-    val secondAnswerCorrect = secondNumber == userSecondNumber
+    val secondAnswerCorrect = (secondNumber == userSecondNumber) ||(firstNumber == userSecondNumber)
     if (secondAnswerCorrect) {
         println("Супер")
     }
