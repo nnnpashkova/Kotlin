@@ -4,13 +4,14 @@ fun main(){
     println("Bведите логин:")
     val loginInput = readln()
     val loginAnswerCorrect = loginInput == LOGIN
-    if (loginAnswerCorrect ){
+
+    if (loginAnswerCorrect){
         println("Введите введите пароль:")
     } else {
         println("Такой аккаунт не зарегистрирован. Зарегистрироваться?")
     }
     val passwordInput = readln()
-    if (passwordInput == PASSWORD) {
+    if (passwordInput == PASSWORD){
         println("Авторизация прошла успешно. Добро пожаловать!")
     } else {
         println("Ошибка авторизации")
