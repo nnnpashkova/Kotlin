@@ -3,19 +3,19 @@ package lesson5
 import kotlin.random.Random
 
 fun main() {
-    val firstRandomNumbers = Random.nextInt(0, 100)
-    val secondRandomNumbers = Random.nextInt(0, 100)
+    val firstRandomNumbers = (0..100).random()
+    val secondRandomNumbers = (0..100).random()
 
     println("Введите первое число от 0 до 100")
     val userFirstNumber = readln().toInt()
-    val firstAnswerCorrect = firstRandomNumbers == userFirstNumber
+    val firstAnswerCorrect = (firstRandomNumbers == userFirstNumber) || (secondRandomNumbers == userFirstNumber)
     if (firstAnswerCorrect) {
         println("Вы молодец!")
     }
 
     println("Введите второе число от 0 до 100")
     val userSecondNumber = readln().toInt()
-    val secondAnswerCorrect = secondRandomNumbers == userSecondNumber
+    val secondAnswerCorrect = (secondRandomNumbers == userSecondNumber) || (firstRandomNumbers == userSecondNumber)
     if (secondAnswerCorrect) {
         println("Cупер!")
     }
