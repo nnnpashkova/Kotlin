@@ -1,8 +1,8 @@
 package lesson4
 
 fun main(){
-    println("Повреждение на коробле незначительные/нет:")
-    val damage = readln()
+    println("Повреждение на коробле да/нет:")
+    val damage = readln().toBoolean()
     println("Количество человек в команде:")
     val numberTeam = readln().toInt()
     println("Количество провизии:")
@@ -20,8 +20,8 @@ fun main(){
     val commandData = condition1 || condition2
     println("Может ли команда отправляться в длительное плавание: $commandData")
 }
-const val DAMAGE_ON_THE_SHIP = "нет"
-const val MINIMUM_NUMBER_OF_TEAM = 50
+const val DAMAGE_ON_THE_SHIP = false
+const val MINIMUM_NUMBER_OF_TEAM = 55
 const val MAXIMUM_NUMBER_OF_TEAM = 70
 const val QUANTITY_PROVISIONS = 50
 const val WEATHER_CONDITIONS = "благоприятные"
