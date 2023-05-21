@@ -10,8 +10,6 @@ fun main() {
 
     if (userAge == firstNumber + secondNumber) {
         println("Добро пожаловать")
-    } else {
-        println("Доступ запрещен")
-    }
+    } else { println("Доступ запрещен") }
     println("$firstNumber + $secondNumber =")
 }
