@@ -8,8 +8,8 @@ fun main() {
     println("$firstNumber + $secondNumber = ")
     var userAge = readln().toInt()
 
-    if (userAge == firstNumber + secondNumber) {
+    if (userAge == firstNumber + secondNumber)
         println("Добро пожаловать")
-    } else { println("Доступ запрещен") }
-    println("$firstNumber + $secondNumber =")
+     else
+        println("Доступ запрещен")
 }
