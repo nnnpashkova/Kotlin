@@ -3,7 +3,6 @@ package lesson6
 fun main() {
     val maxNumberOfAttempts = 5
     var numberOfAttempts = 0
-    //val intervalNumbers = (1..9).random()
     val correctNumber = 5
     var userEntered = 0
 
