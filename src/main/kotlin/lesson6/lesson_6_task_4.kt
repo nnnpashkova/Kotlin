@@ -9,7 +9,7 @@ fun main() {
     while (numberOfAttempts < maxNumberOfAttempts && correctNumber != userEntered) {
         numberOfAttempts++
         println("Введите число от 1 до 9:")
-        val userEntered = readln().toInt()
+        userEntered = readln().toInt()
         if (correctNumber == userEntered) {
             println("Это была великолепная игра!")
             return
