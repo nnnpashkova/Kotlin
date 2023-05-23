@@ -16,5 +16,5 @@ fun main() {
         if (registrationLogin != authorizationLogin || registrationPassword != authorizationPassword) {
             println("Неправильный логин или пароль. Введите заново")
         }
-} while (registrationLogin != authorizationLogin || registrationPassword != authorizationPassword)
+    } while (registrationLogin != authorizationLogin || registrationPassword != authorizationPassword)
 }
