@@ -1,11 +1,12 @@
 package lesson7
 
-fun main() {1
-    println("Введите число:")
+fun main() {
+    println ("Введите число:")
     val userNumber = readln().toInt()
-    for(i in 0.. userNumber){
-       if (i % 2 == 0) {
-           println(i)
+
+    for (number in 0.. userNumber){
+       if (number % 2 == 0) {
+           println(number)
         }
     }
 }
