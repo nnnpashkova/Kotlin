@@ -4,9 +4,9 @@ fun main() {
     println("Введите количество ингредиентов:")
     val quantityIngredients = readln().toInt()
     val ingredientsArray = arrayOfNulls<String>(quantityIngredients)
-    for (i in 1..quantityIngredients) {
+    for (i in 0..quantityIngredients) {
        println("Введите ингредиент:")
         val ingredient = readln()
-        ingredientsArray[0] = ingredient
+        ingredientsArray[i] = ingredient
     }
 }
