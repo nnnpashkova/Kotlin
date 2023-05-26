@@ -5,7 +5,7 @@ fun main() {
     val numberPerson = numberGenerator()
     println(numberPerson)
 
-    println("Бросает кубики компютер:")
+    println("Бросает кубики компьютер:")
     val numberСomputer = numberGenerator()
     println(numberСomputer)
 
