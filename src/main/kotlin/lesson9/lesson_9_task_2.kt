@@ -1,8 +1,4 @@
 package lesson9
-
-import java.util.Arrays.equals
-
-
 fun main() {
     val recipe = mutableListOf("творог", "яйца", "сахар")
     recipe.forEach {
