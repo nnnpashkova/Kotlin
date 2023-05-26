@@ -1,5 +1,8 @@
 package lesson9
 
+import java.util.Arrays.equals
+
+
 fun main() {
     val recipe = mutableListOf("творог", "яйца", "сахар")
     recipe.forEach {
@@ -8,7 +11,8 @@ fun main() {
     println("В рецепте есть базовые ингредиенты: $recipe")
     println("Желаете добавить еще да/нет?")
     val userResponse = readln()
-    if (userResponse == "да") {
+
+    if (userResponse.equals("ДА", ignoreCase = true)) {
         println("Какой ингредиент вы хотите добавить?")
         val ingredientUser = readln()
         recipe.add(ingredientUser)
