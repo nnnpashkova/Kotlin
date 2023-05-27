@@ -1,7 +1,5 @@
 package lesson10
 
-import sun.security.util.Length
-
 fun main() {
     println("Введите количество символов:")
     val passwordLength = readln().toInt()
