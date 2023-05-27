@@ -1,5 +1,7 @@
 package lesson9
 
+import java.util.*
+
 fun main() {
     val recipes = mutableSetOf<String>()
     while (recipes.size != 5){
@@ -7,7 +9,8 @@ fun main() {
         val userIngredient = readln()
         recipes.add(userIngredient)
     }
-    val result = "${recipes.sorted().joinToString().capitalize()}."
+    val result = "${recipes.sorted().joinToString()
+        .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }}."
     println(result)
 }
 
