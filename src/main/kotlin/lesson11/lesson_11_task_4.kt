@@ -50,7 +50,7 @@ class Contact(
     val name: String,
     val phoneNumbers: List<PhoneNumber>,
     val iCloud: String,
-    val closePeople: List<Contact>
+    val closePeople: List<Contact>,
 ) {
     fun toWriteAMessage() {
 
@@ -70,7 +70,7 @@ class Contact(
 
 class PhoneNumber(
     number: String,
-    phoneType: PhoneType
+    phoneType: PhoneType,
 )
 
-enum class PhoneType { HOME, CELLULAR }
+enum class PhoneType { HOME, CELLULAR, }
