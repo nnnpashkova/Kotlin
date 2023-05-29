@@ -26,3 +26,10 @@ fun main() {
     println(user2.mail)
 
 }
+
+class User(
+    val id: Int,
+    val login: String,
+    val password: String,
+    val mail: String,
+)
