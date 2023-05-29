@@ -9,9 +9,8 @@ fun main() {
 }
 
 fun generatePassword(length: Int): String {
-    val charset = "0123456789 !\"#\$%&'()*+,-./"
+    val charset = (0x20..0x39).asSequence().toList()
     return (1..length)
         .map { charset.random() }
         .joinToString("")
-
 }
