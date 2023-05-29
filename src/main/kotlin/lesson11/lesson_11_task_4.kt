@@ -4,12 +4,12 @@ package lesson11
 fun main() {
     val contact1 = Contact(
         avatar = "mouse.png",
-        name = "FirstNameSecondName",
+        name = "Мария Машкова",
         phoneNumbers = listOf(
             PhoneNumber("8(999)999-42-42", PhoneType.CELLULAR),
             PhoneNumber("8(999)888-42-42", PhoneType.HOME)
         ),
-        iCloud = "mail@mail",
+        iCloud = "mariii1990@mail",
         closePeople = listOf(
             Contact(
                 avatar = "bride.png",
@@ -45,3 +45,32 @@ fun main() {
     )
 }
 
+class Contact(
+    val avatar: String,
+    val name: String,
+    val phoneNumbers: List<PhoneNumber>,
+    val iCloud: String,
+    val closePeople: List<Contact>
+) {
+    fun toWriteAMessage() {
+
+    }
+
+    fun call() {
+    }
+
+    fun videoСall() {
+    }
+
+    fun sendMail() {
+
+    }
+
+}
+
+class PhoneNumber(
+    number: String,
+    phoneType: PhoneType
+)
+
+enum class PhoneType { HOME, CELLULAR }
