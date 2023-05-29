@@ -33,13 +33,14 @@ fun main() {
 fun userRegistrationLogin(): String {
     var userLogin = ""
     println("Придумайте логин:")
-    while (!isLoginValid(userLogin)) {
+    do {
         userLogin = readln()
         if (!isLoginValid(userLogin)) {
             println("Логин должен состоять минимум из 4 символов. Ввведите еще раз:")
+        } else {
+            return userLogin
         }
-    }
-    return userLogin
+    } while (true)
 }
 
 fun isLoginValid(login: String): Boolean = login.length >= 4
