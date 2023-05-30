@@ -5,10 +5,11 @@ fun main() {
     val personLogin = readln()
     println("Введите пароль:")
     val personPassword = readln()
+
     if (!checkMinLength(text = personLogin) || !checkMinLength(text = personPassword)) {
         println("Логин или пароль недостаточно длинные")
     }
 }
 
-fun  checkMinLength (text: String): Boolean = text.length > 4
+fun checkMinLength (text: String): Boolean = text.length > 4
 
