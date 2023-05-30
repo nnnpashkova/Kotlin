@@ -26,11 +26,7 @@ class User(
     var bio: String?,
 ) {
     fun displayingUserInformation() {
-        println(id)
-        println(login)
-        println(password)
-        println(mail)
-        println(bio)
+        println("Информация о пользователи: $id, $login, $password, $mail, $bio")
     }
 
     fun readingInformationAboutUsers() {
@@ -45,6 +41,8 @@ class User(
             val userPasswordChanged = readln()
             password = userPasswordChanged
             println("Пароль изменен, Ваш новый пароль: $password")
+        } else {
+            changePassword()
         }
     }
 
