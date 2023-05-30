@@ -14,16 +14,9 @@ fun main() {
         password = "1995name",
         mail = "elena1995@gmail.ru",
     )
-
-    println(user1.id)
-    println(user1.login)
-    println(user1.password)
-    println(user1.mail)
+    println("User information: ${user1.id}, ${user1.login}, ${user1.password}, ${user1.mail}")
     println()
-    println(user2.id)
-    println(user2.login)
-    println(user2.password)
-    println(user2.mail)
+    println("User information: ${user2.id}, ${user2.login}, ${user2.password}, ${user2.mail}")
 
 }
 
