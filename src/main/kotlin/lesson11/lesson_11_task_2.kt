@@ -12,7 +12,7 @@ fun main() {
     println("Введите инфомацию о себе:")
     user1.readingInformationAboutUsers()
     user1.changePassword()
-    user1.sendAMessage(text = user1.mail)
+    user1.sendAMessage(text = "Поздравляем, Вы успешно изменили пароль")
 
 
 }
@@ -47,7 +47,6 @@ class User(
     }
 
     fun sendAMessage(text: String) {
-        println(text)
-
+        println("Дорогой $login! Сообщение: $text отправлено на почту $mail")
     }
 }
