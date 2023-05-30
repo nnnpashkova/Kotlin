@@ -1,7 +1,7 @@
 package lesson12
 
 fun main() {
-val weather1 = Weather()
+    val weather1 = Weather()
     weather1.daytimeWeather = 25
     weather1.weatherNight = 15
     weather1.isRaining = false
@@ -23,7 +23,6 @@ class Weather {
     var weatherNight = 0
     var isRaining = false
     var atmospherePressure = 759
-
 
     fun print() {
         println("Погода днем: $daytimeWeather")
