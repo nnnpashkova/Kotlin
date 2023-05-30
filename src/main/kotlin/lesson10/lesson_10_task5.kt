@@ -1,8 +1,8 @@
 package lesson10
 
 fun main() {
-    val userRegistrationLogin = userRegistrationLogin()
-    val userRegistrationPassword = userRegistrationPassword()
+    val userRegistrationLogin = registersLogin()
+    val userRegistrationPassword = registersPassword()
     var userAuthorizationLogin = ""
     var userAuthorizationPassword = ""
 
@@ -30,7 +30,7 @@ fun main() {
 
 }
 
-fun userRegistrationLogin(): String {
+fun registersLogin(): String {
     var userLogin = ""
     println("Придумайте логин:")
     do {
@@ -45,7 +45,7 @@ fun userRegistrationLogin(): String {
 
 fun isLoginValid(login: String): Boolean = login.length >= 4
 
-fun userRegistrationPassword(): String {
+fun registersPassword(): String {
     val length = 10
     val randomPassword = getRandomString(length)
     println("Ваш пароль: $randomPassword ")
