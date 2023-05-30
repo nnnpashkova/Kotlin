@@ -4,6 +4,10 @@ fun main() {
 
 }
 
-class Phonebook(val name: String, val phoneNumber: Int, val company: String?) {
+class Phonebook(
+    val name: String,
+    val phoneNumber: Int,
+    val company: String?,
+) {
 
 }
