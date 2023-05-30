@@ -9,7 +9,7 @@ fun main() {
 }
 
 fun generatePassword(length: Int): String {
-    val charset = (0x20..0x39).asSequence().toList()
+    val charset = (' '..'9')
     return (1..length)
         .map { charset.random() }
         .joinToString("")
