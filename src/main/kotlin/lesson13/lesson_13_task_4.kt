@@ -3,6 +3,7 @@ package lesson13
 fun main() {
     addingAnEntryToThePhonebook()
 }
+
 private class Phonebook(
     val name: String?,
     val phoneNumber: Long?,
@@ -18,7 +19,12 @@ private class Phonebook(
 fun addingAnEntryToThePhonebook() {
     do {
         println("Введите имя:")
-        val nameUser: String? = readln() ?: null
+        val nameUser: String = readln()
+        val nameUserNull = if (nameUser.isEmpty()) {
+            null
+        } else {
+            nameUser
+        }
         val phoneNumber: Long = addingPhoneNumber()
         println("Введите компанию:")
         val companyUser: String = readln()
