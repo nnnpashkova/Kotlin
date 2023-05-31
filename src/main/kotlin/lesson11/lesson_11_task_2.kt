@@ -6,30 +6,26 @@ fun main() {
         login = "andrey1990@gmail.ru",
         password = "123andrey",
         mail = "andrey1990@gmail.ru",
-        bio = "",
     )
-    user1.displayingUserInformation()
+    user1.displayUserInformation()
     println("Введите инфомацию о себе:")
-    user1.readingInformationAboutUsers()
+    user1.readInformationAboutUsers()
     user1.changePassword()
     user1.sendAMessage(text = "Поздравляем, Вы успешно изменили пароль")
-
-
 }
-
 
 class User(
     val id: Int,
     val login: String,
     var password: String,
     val mail: String,
-    var bio: String?,
+    var bio: String = "",
 ) {
-    fun displayingUserInformation() {
+    fun displayUserInformation() {
         println("Информация о пользователи: $id, $login, $password, $mail, $bio")
     }
 
-    fun readingInformationAboutUsers() {
+    fun readInformationAboutUsers() {
         bio = readln()
     }
 
