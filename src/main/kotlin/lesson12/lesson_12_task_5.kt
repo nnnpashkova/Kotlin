@@ -20,8 +20,6 @@ fun main() {
             weatherNight = (10..40).random(),
             rain = (0..1).random() == 1,
             atmospherePressure = (700..780).random(),
-            airTemperature = "+",
-            measure = "мм"
         )
         daySummerList.add(daySummer)
     }
@@ -52,8 +50,8 @@ class Day(
     var weatherNight: Int,
     var rain: Boolean,
     var atmospherePressure: Int,
-    var airTemperature: String,
-    var measure: String,
+    var airTemperature: String = "+",
+    var measure: String = "мм",
 )
 
 const val AMOUNT_OF_DAYS = 10
