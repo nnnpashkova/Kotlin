@@ -1,22 +1,21 @@
 package lesson13
 
 fun main() {
-    addingAnEntryToThePhonebook()
+    createPhonebook().forEach {
+        println(it.name)
+        println(it.company)
+        println(it.phoneNumber)
+    }
 }
 
 private class Phonebook(
     val name: String?,
     val phoneNumber: Long?,
     val company: String?,
-) {
-    fun printPhonebook() {
-        println("Имя: $name")
-        println("Номер телефона: $phoneNumber")
-        println("Компания: $company")
-    }
-}
+)
 
-fun addingAnEntryToThePhonebook() {
+private fun createPhonebook(): List<Phonebook> {
+    val phonebookList = mutableListOf<Phonebook>()
     do {
         println("Введите имя:")
         val nameUser: String = readln()
@@ -25,7 +24,12 @@ fun addingAnEntryToThePhonebook() {
         } else {
             nameUser
         }
-        val phoneNumber: Long = addingPhoneNumber()
+        println("Введите номер телефона:")
+        val phoneUser: Long? = try {
+            readln().toLong()
+        } catch (n: NumberFormatException) {
+            null
+        }
         println("Введите компанию:")
         val companyUser: String = readln()
         val companyUserNull = if (companyUser.isEmpty()) {
@@ -33,26 +37,18 @@ fun addingAnEntryToThePhonebook() {
         } else {
             companyUser
         }
-
         println("Если хотите добавить новую запись, введите \\“да\\””")
         val addingNumber: String = readln()
 
         val phonebook = Phonebook(
-            name = nameUser,
-            phoneNumber = phoneNumber,
+            name = nameUserNull,
+            phoneNumber = phoneUser,
             company = companyUserNull,
         )
-        phonebook.printPhonebook()
 
-    } while (addingNumber == "да")
-}
-
-fun addingPhoneNumber(): Long {
-    while (true) {
-        println("Введите номер телефона:")
-        val phoneUser: Long? = readln().toLong()
         if (phoneUser != null) {
-            return phoneUser
+            phonebookList.add(phonebook)
         }
-    }
+    } while (addingNumber.equals("да"))
+    return phonebookList
 }
