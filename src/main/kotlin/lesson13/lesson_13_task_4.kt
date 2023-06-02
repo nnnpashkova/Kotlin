@@ -37,7 +37,7 @@ private fun createPhonebook(): List<Phonebook> {
         } else {
             companyUser
         }
-        println("Если хотите добавить новую запись, введите \\“да\\””")
+        println("Если хотите добавить новую запись, введите \"да\"")
         val addingNumber: String = readln()
 
         val phonebook = Phonebook(
