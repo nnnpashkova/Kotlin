@@ -20,9 +20,9 @@ fun main() {
         caseThickness = 48
     )
 
-    cargoShip1.printCargoShip()
+    cargoShip1.printShip()
     println()
-    shipIcebreaker1.printShipIcebreaker()
+    shipIcebreaker1.printShip()
     shipIcebreaker1.printIsIcebreaker()
 }
 
@@ -32,7 +32,14 @@ open class Ship(
     val speed: Int,
     val loadCapacity: Int,
     val isIcebreaker: Boolean = false,
-)
+) {
+    open fun printShip() {
+        println("Тип коробля: $shipType")
+        println("Название: $name")
+        println("Скорость: $speed")
+        println("Грузоподъемность: $loadCapacity")
+    }
+}
 
 private class CargoShip(
     shipType: String,
@@ -42,14 +49,11 @@ private class CargoShip(
     val cargoType: String,
 ) : Ship(shipType, name, speed, loadCapacity) {
 
-    fun printCargoShip() {
-        println("Тип коробля: $shipType")
-        println("Название: $name")
-        println("Скорость: $speed")
-        println("Грузоподъемность: $loadCapacity")
+
+    override fun printShip() {
+        super.printShip()
         println("Тип груза: $cargoType")
     }
-
 }
 
 private class ShipIcebreaker(
@@ -65,12 +69,10 @@ private class ShipIcebreaker(
         println("Ледокол может колоть лед: $isIcebreaker")
     }
 
-    fun printShipIcebreaker() {
-        println("Тип коробля: $shipType")
-        println("Название: $name")
-        println("Скорость: $speed")
-        println("Грузоподъемность: $loadCapacity")
+    override fun printShip() {
+        super.printShip()
         println("Толщина корпуса в местах ломки льда: $caseThickness мм")
     }
 
 }
+
