@@ -1,7 +1,7 @@
 package lesson14
 
 fun main() {
-    val satellite = listOf(
+    val listOfSatellites = listOf(
         Satellite(
             "Ариэль",
             false,
@@ -16,13 +16,12 @@ fun main() {
         )
     )
 
-
     val planet = Planet(
         name = "Уран",
         haveAnAtmosphere = false,
-        haveWater = false,
+        hasWater = false,
         suitableForLanding = false,
-        satellite = satellite
+        satellites = listOfSatellites
     )
     planet.printInfo()
 }
@@ -30,20 +29,20 @@ fun main() {
 open class СelestialBodies(
     val name: String,
     val haveAnAtmosphere: Boolean,
-    val haveWater: Boolean,
+    val hasWater: Boolean,
     val suitableForLanding: Boolean
 ) {
     open fun printInfo() {
-        println("$name, $haveAnAtmosphere, $haveWater, $suitableForLanding")
+        println("$name, $haveAnAtmosphere, $hasWater, $suitableForLanding")
     }
 }
 
 class Satellite(
     name: String,
     haveAnAtmosphere: Boolean,
-    haveWater: Boolean,
+    hasWater: Boolean,
     suitableForLanding: Boolean,
-) : СelestialBodies(name, haveAnAtmosphere, haveWater, suitableForLanding) {
+) : СelestialBodies(name, haveAnAtmosphere, hasWater, suitableForLanding) {
     override fun printInfo() {
         println("Спутник:")
         super.printInfo()
@@ -53,14 +52,14 @@ class Satellite(
 class Planet(
     name: String,
     haveAnAtmosphere: Boolean,
-    haveWater: Boolean,
+    hasWater: Boolean,
     suitableForLanding: Boolean,
-    val satellite: List<Satellite>,
-) : СelestialBodies(name, haveAnAtmosphere, haveWater, suitableForLanding) {
+    val satellites: List<Satellite>,
+) : СelestialBodies(name, haveAnAtmosphere, hasWater, suitableForLanding) {
 
     override fun printInfo() {
         super.printInfo()
-        satellite.forEach {
+        satellites.forEach {
             it.printInfo()
         }
 
