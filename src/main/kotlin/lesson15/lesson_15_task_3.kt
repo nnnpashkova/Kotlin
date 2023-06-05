@@ -1,51 +1,58 @@
 package lesson15
 
 fun main() {
-    val user = User("Пользователь")
-    val administrator = Administrator("Администратор")
+    val user = User("Пользователь","Ирина")
+    val administrator = Administrator("Администратор", "Женя")
 
-    user.reaForum()
-    user.writeMessage()
-    println()
-    administrator.reaForum()
-    administrator.writeMessage()
-    administrator.deleteMessage()
-    administrator.deleteUser()
-
+        user.readMessage()
+        user.writeMessage(message = "Всем привет!")
+        println()
+        administrator.readMessage()
+        administrator.writeMessage(message = "Привет")
+        administrator.deleteMessage(message = "Привет")
+        administrator.deleteUser(user = "Ирина")
 
 }
 
-abstract class Forum(
+abstract class BaseUser(
     val userType: String,
+    val name: String,
 ) {
-    abstract fun reaForum()
-    abstract fun writeMessage()
+    abstract fun readMessage(): String
+    abstract fun writeMessage(message: String)
 }
 
-class User(userType: String) : Forum(userType) {
-    override fun reaForum() {
-        println("$userType: читает форум")
+class User(
+    userType: String,
+    name: String
+) : BaseUser(userType, name) {
+    override fun readMessage(): String {
+        println("$userType $name: читает форум")
+        return name
     }
 
-    override fun writeMessage() {
-        println("$userType: пишет сообщение")
+
+    override fun writeMessage(message: String) {
+        println("$userType $name: пишет сообщение")
     }
 }
 
-class Administrator(userType: String) : Forum(userType) {
-    override fun reaForum() {
-        println("$userType: читает форум")
+class Administrator(userType: String,
+    name: String) : BaseUser(userType, name) {
+    override fun readMessage(): String {
+        println("$userType $name: читает форум")
+        return name
     }
 
-    override fun writeMessage() {
-        println("$userType: пишет сообщение")
+    override fun writeMessage(message: String) {
+        println("$userType $name: пишет сообщение")
     }
 
-    fun deleteUser() {
-        println("$userType: удалил пользователя")
+    fun deleteUser(user: String) {
+        println("$userType $name: удалил пользователя")
     }
 
-    fun deleteMessage() {
-        println("$userType: удалил сообщение")
+    fun deleteMessage(message: String) {
+        println("$userType $name: удалил сообщение")
     }
 }
