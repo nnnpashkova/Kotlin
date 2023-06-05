@@ -70,13 +70,15 @@ class Triangle(
 }
 
 fun perimeterFigures(figure: List<Figure>) {
-    val sumRedFigure = figure.filter { it.color.equals("красный") }
+    val sumRedFigure = figure.filter { it.color.equals(RED_COLOR)}
         .sumOf { it.calculatePerimeter() }
     println("Периметр красных фигур = $sumRedFigure")
 }
 
 fun squareFigures(figure: List<Figure>) {
-    val sumRedFigure = figure.filter { it.color.equals("красный") }
+    val sumRedFigure = figure.filter { it.color.equals(RED_COLOR) }
         .sumOf { it.calculateArea() }
     println("Площадь красных фигур = $sumRedFigure")
 }
+
+const val RED_COLOR = "красный"
