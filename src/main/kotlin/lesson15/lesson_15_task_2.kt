@@ -4,30 +4,30 @@ fun main() {
     val temperature = Temperature("Cегодня средняя температура +", 20)
     val precipitation = Precipitation("Сегодня вероятность осадков", 0)
 
-    temperature.serverConnection()
-    temperature.sendingData()
+    temperature.connectServer()
+    temperature.sendData()
     println()
-    precipitation.serverConnection()
-    precipitation.sendingData()
+    precipitation.connectServer()
+    precipitation.sendData()
 
 }
 
 abstract class Message(
     val message: String,
 ) {
-    abstract fun serverConnection()
-    abstract fun sendingData()
+    abstract fun connectServer()
+    abstract fun sendData()
 }
 
 class Temperature(
     message: String,
     val temperature: Int,
 ) : Message(message) {
-    override fun serverConnection() {
+    override fun connectServer() {
         println("Сервер, данные температуры: \n$message$temperature")
     }
 
-    override fun sendingData() {
+    override fun sendData() {
         println("Данные температуры: \n$message$temperature")
     }
 }
@@ -36,11 +36,11 @@ class Precipitation(
     message: String,
     val precipitation: Int,
 ) : Message(message) {
-    override fun serverConnection() {
+    override fun connectServer() {
         println("Сервер, данные осадков: \n$message $precipitation%")
     }
 
-    override fun sendingData() {
+    override fun sendData() {
         println("Данные осадков: \n$message $precipitation%")
     }
 }
