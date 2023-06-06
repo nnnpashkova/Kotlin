@@ -40,7 +40,7 @@ class Truck(
 ) : Car(numberPassengers), MovementCars, PassengersTransportation, CargoTransportation {
 
     init {
-        check(numberPassengers >= 0 && numberPassengers <= 1) { "Количество пассажиров должно быть не более 1, а было передано $numberPassengers" }
+        check(numberPassengers in 0..1) { "Количество пассажиров должно быть не более 1, а было передано $numberPassengers" }
     }
 
     override fun drive() = println("Грузовая машина движется")
@@ -53,7 +53,7 @@ class PassengerCar(
 ) : Car(numberPassengers), MovementCars, PassengersTransportation {
 
     init {
-        check(numberPassengers >= 0 && numberPassengers <= 3) { "Количество пассажиров должно быть не более 3, а было передано $numberPassengers" }
+        check(numberPassengers in 0..3) { "Количество пассажиров должно быть не более 3, а было передано $numberPassengers" }
     }
 
     override fun drive() = println("Легковая машина движется")
