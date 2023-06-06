@@ -1,12 +1,12 @@
 package lesson14
 
 fun main() {
-    val circle1 = Circle(10, "красный")
-    val circle2 = Circle(4, "черный")
-    val rectangle1 = Rectangle(12, 6, "зеленый")
-    val rectangle2 = Rectangle(8, 4, "красный")
-    val triangle1 = Triangle(5, 7, 6, 10, "красный")
-    val triangle2 = Triangle(10, 7, 6, 8, "черный")
+    val circle1 = Circle(10, RED_COLOR)
+    val circle2 = Circle(4, BLACK_СOLOR)
+    val rectangle1 = Rectangle(12, 6, GREEN_COLOR)
+    val rectangle2 = Rectangle(8, 4, RED_COLOR)
+    val triangle1 = Triangle(5, 7, 6, 10, RED_COLOR)
+    val triangle2 = Triangle(10, 7, 6, 8, BLACK_СOLOR)
     val figureList = listOf(circle1, circle2, rectangle1, rectangle2, triangle1, triangle2)
     perimeterFigures(figureList)
     squareFigures(figureList)
@@ -61,7 +61,7 @@ class Triangle(
 ) : Figure(color) {
     override fun calculateArea(): Int {
         val squareTriangle = 1 / 2 * height * baseTriangle
-        return calculateArea()
+        return squareTriangle
     }
     override fun calculatePerimeter(): Int {
         val perimeterTriangle = baseTriangle + side1 + side2
@@ -82,3 +82,5 @@ fun squareFigures(figure: List<Figure>) {
 }
 
 const val RED_COLOR = "красный"
+const val BLACK_СOLOR = "черный"
+const val GREEN_COLOR = "зеленый"
