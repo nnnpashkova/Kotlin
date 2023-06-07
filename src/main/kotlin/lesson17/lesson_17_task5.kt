@@ -1,23 +1,35 @@
 package lesson17
 
 fun main() {
-    val user = User()
-    user.login = "list"
-    user.password = "12356787654"
+    val user = User("list@mail.ru", "listlist")
+
+    println(user.login)
+    println(user.password)
 }
 
-class User() {
-    var login: String = "list1900@mail.ru"
+class User(login: String, password: String) {
+    var login = login
         set(value) {
             println("Логин успешно изменен")
             field
         }
-    var password: String = "list900"
-        get() = "*******"
+    var password = password
+        get():String {
+            val length = field.length
+            var result = ""
+            for (i in 0 ..length) {
+                result += "*"
+            }
+            return result
+        }
         set(value) {
             println("Вы не можете изменить пароль")
             field
         }
 }
+
+
+
+
 
 
