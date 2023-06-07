@@ -10,14 +10,14 @@ fun main() {
     println("Новый ответ викторины: ${quiz.answer}")
 }
 
-class Quiz(
-) {
+class Quiz {
     var question = "Назовите самое соленое море в Мировом океане "
-        get() = "В это озеро в России впадает 336 рек, а вытекает только одна. Что это за озеро?"
+        get() = field
+
     var answer = "Красное"
         get() = field
         set(value) {
-            field = "Байкал"
+            field = value
         }
 }
 
