@@ -1,21 +1,21 @@
 package lesson16
 
 fun main() {
-    val circle = Сircle(4)
+    val circle = Circle(4, 3.14)
     circle.calculateArea()
     circle.calculateLength()
 }
 
-class Сircle(
-    private val radius: Int
+class Circle(
+    private val radius: Int,
+    private val numberPi: Double,
 ) {
     fun calculateArea() {
-        println("Площадь круга: ${NUMBER_PI * radius * radius}")
+        println("Площадь круга: ${numberPi * radius * radius}")
     }
 
     fun calculateLength() {
-        println("Длина окружности: ${2 * NUMBER_PI * radius}")
+        println("Длина окружности: ${2 * numberPi * radius}")
     }
 }
 
-const val NUMBER_PI = 3.14
