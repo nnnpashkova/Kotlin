@@ -1,16 +1,16 @@
 package lesson15
 
 fun main() {
-    val user = User("Пользователь","Ирина")
+    val user = User("Пользователь", "Ирина")
     val administrator = Administrator("Администратор", "Женя")
 
-        user.readMessage()
-        user.writeMessage(message = "Всем привет!")
-        println()
-        administrator.readMessage()
-        administrator.writeMessage(message = "Привет")
-        administrator.deleteMessage(message = "Привет")
-        administrator.deleteUser(user = "Ирина")
+    user.readMessage()
+    user.writeMessage(message = "Всем привет!")
+    println()
+    administrator.readMessage()
+    administrator.writeMessage(message = "Привет")
+    administrator.deleteMessage(message = "Привет")
+    administrator.deleteUser(user = "Ирина")
 
 }
 
@@ -18,7 +18,7 @@ abstract class BaseUser(
     val userType: String,
     val name: String,
 ) {
-    abstract fun readMessage(): String
+    abstract fun readMessage()
     abstract fun writeMessage(message: String)
 }
 
@@ -26,22 +26,21 @@ class User(
     userType: String,
     name: String
 ) : BaseUser(userType, name) {
-    override fun readMessage(): String {
+    override fun readMessage() {
         println("$userType $name: читает форум")
-        return name
     }
-
 
     override fun writeMessage(message: String) {
         println("$userType $name: пишет сообщение")
     }
 }
 
-class Administrator(userType: String,
-    name: String) : BaseUser(userType, name) {
-    override fun readMessage(): String {
+class Administrator(
+    userType: String,
+    name: String
+) : BaseUser(userType, name) {
+    override fun readMessage() {
         println("$userType $name: читает форум")
-        return name
     }
 
     override fun writeMessage(message: String) {
