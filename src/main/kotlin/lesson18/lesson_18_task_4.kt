@@ -11,8 +11,8 @@ fun showAllBox(box: Array<Box>) {
     box.forEach { println(it.returnTheParcels()) }
 }
 
-open class Box {
-    open fun returnTheParcels() = ""
+abstract class Box {
+    abstract fun returnTheParcels(): String
 }
 
 class RectangularBox(
