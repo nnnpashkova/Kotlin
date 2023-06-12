@@ -1,10 +1,7 @@
 package lesson19
 
 fun main() {
-    informUser(Fish.GUPPY)
-    informUser(Fish.ANGELFISH)
-    informUser(Fish.GOLDFISH)
-    informUser(Fish.SIAMESE_FIGHTING_FISH)
+    for (i in Fish.values()) informUser(i)
 }
 
 enum class Fish {
