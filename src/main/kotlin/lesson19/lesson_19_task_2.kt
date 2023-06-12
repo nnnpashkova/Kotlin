@@ -1,8 +1,14 @@
 package lesson19
 
 fun main() {
-    val productDescription = ProductDescription("сарафан", 1232,ProductCategories.CLOTH,)
+    val productDescription = ProductDescription("сарафан", 1232,ProductCategories.CLOTH)
+    val productDescription1 = ProductDescription("ножницы", 2252,ProductCategories.STATIONERY)
+    val productDescription2 = ProductDescription("тарелки", 3239,ProductCategories.MISCELLANEOUS)
     productDescription.displayProductInformation()
+    println()
+    productDescription1.displayProductInformation()
+    println()
+    productDescription2.displayProductInformation()
 }
 
 enum class ProductCategories {
