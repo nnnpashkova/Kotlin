@@ -8,10 +8,13 @@ fun main() {
         val userGender = readln()
         filingData.add(
             Human(
-                name = userName, gender = if (userGender == "женский") {
+                name = userName,
+                gender = if (userGender == "женский") {
                     Gender.FEMALE
-                } else {
+                } else if (userGender == "мужской") {
                     Gender.MALE
+                } else {
+                    println("Пол введен неверно")
                 }
             )
         )
@@ -21,7 +24,7 @@ fun main() {
 
 data class Human(
     val name: String,
-    val gender: Gender,
+    val gender: Unit,
 )
 
 enum class Gender {
