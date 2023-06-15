@@ -24,7 +24,7 @@ fun main() {
 
 data class Human(
     val name: String,
-    val gender: Unit,
+    val gender: Gender,
 )
 
 enum class Gender {
