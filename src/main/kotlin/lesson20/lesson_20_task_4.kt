@@ -4,6 +4,6 @@ fun main() {
     val list = listOf("один", "два", "три")
     val mapLambds = list.map { { "Нажат элемент: $it" } }
     mapLambds.forEach {
-        it()
+        println(it.invoke())
     }
 }
