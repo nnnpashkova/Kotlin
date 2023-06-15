@@ -2,8 +2,8 @@ package lesson20
 
 fun main() {
     val list = listOf("один", "два", "три")
-    val mapLambds = list.map { { "Нажат элемент: $it" } }
-    mapLambds.forEach {
+    val mapList = list.map { { "Нажат элемент: $it" } }
+    mapList.forEach {
         println(it.invoke())
     }
 }
