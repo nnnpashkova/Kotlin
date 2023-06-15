@@ -1,23 +1,34 @@
 package lesson19
 
+
 fun main() {
     val filingData = mutableListOf<Human>()
     println("Введите имя с большой буквы, укажите пол: мужской или женский")
     for (i in 0 until 5) {
         val userName = readln()
-        val userGender = readln()
-        filingData.add(
-            Human(
-                name = userName,
-                gender = if (userGender == "женский") {
-                    Gender.FEMALE
-                } else if (userGender == "мужской") {
-                    Gender.MALE
-                } else {
-                    println("Пол введен неверно")
-                }
+        val userGender = when (readln()) {
+            "женский" -> {
+                Gender.FEMALE
+            }
+
+            "мужской" -> {
+                Gender.MALE
+            }
+
+            else -> {
+                println("Пол введен неверно")
+                null
+            }
+        }
+
+        if (userGender != null) {
+            filingData.add(
+                Human(
+                    name = userName,
+                    gender = userGender
+                )
             )
-        )
+        }
     }
     filingData.forEach { println(it) }
 }
