@@ -7,14 +7,8 @@ fun main() {
     for (i in 0 until 5) {
         val userName = readln()
         val userGender = when (readln()) {
-            "женский" -> {
-                Gender.FEMALE
-            }
-
-            "мужской" -> {
-                Gender.MALE
-            }
-
+            "женский" -> Gender.FEMALE
+            "мужской" -> Gender.MALE
             else -> {
                 println("Пол введен неверно")
                 null
