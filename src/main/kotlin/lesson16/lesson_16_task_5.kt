@@ -1,12 +1,12 @@
 package lesson16
 
 fun main() {
-    var game = Gamer("Александр", 100, 30)
+    val game = Gamer("Александр", 100, 30)
     game.damage(100)
     game.discern(10)
 }
 
-class Gamer(
+private class Gamer(
     val name: String,
     private var health: Int,
     var impactForce: Int
