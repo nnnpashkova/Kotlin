@@ -6,10 +6,10 @@ fun main() {
     game.discern(10)
 }
 
-private class Gamer(
-    val name: String,
+class Gamer(
+    private val name: String,
     private var health: Int,
-    var impactForce: Int
+    private var impactForce: Int
 ) {
 
     fun damage(damage: Int) {
